@@ -1,0 +1,113 @@
+<div class="body"><h1 class="heading">Register here</h1>
+
+    <!-- Pills content -->
+    <div class="tab-content">
+      <div
+        class="tab-pane fade show active"
+        id="pills-login"
+        role="tabpanel"
+        aria-labelledby="tab-login"
+      >
+      <div class="form" >
+        <form  [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+          <div class="text-center mb-3">
+    
+    </div>
+    
+    
+    
+          <!-- Name input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="registerName">Name</label>
+    
+            <input type="text" id="registerName" class="form-control" placeholder="enter your name..."  formControlName="name">
+    
+            <div class="text-danger"
+                    *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+                    Name is required
+                  </div>
+          </div>
+    
+          <!-- surname input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="registerUsername">Surname</label>
+    
+            <input type="text" id="registerUsername" class="form-control" placeholder="enter your surname..."  formControlName="surname">
+    
+            <div class="text-danger"
+            *ngIf="(registerFormControl.surname.touched || submitted) && registerFormControl.surname.errors?.required">
+          surname is required
+          </div>
+    
+          </div>
+    
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="registerEmail">Email</label>
+            <input type="email" id="registerEmail" class="form-control" placeholder="enter your email..."  formControlName="email">
+    
+    
+            <div class="text-danger"
+            *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+          email is required
+          </div>
+    
+          </div>
+    
+           <!-- Email phone number -->
+           <div class="form-outline mb-4">
+            <label class="form-label" for="registerPhoneNumber">Phone Number</label>
+            <input type="text" id="registerPhoneNumber" (keypress)="onlyNumbersAllowed($event)" max = "10" class="form-control" placeholder="enter your phone number..."  formControlName="username" maxlength="10" (keypress)=_keyPress($event)>
+    
+              <div class="text-danger"
+              *ngIf="(registerFormControl.username.touched || submitted) && registerFormControl.username.errors?.required"         >
+            phone number is required
+            </div>
+    
+            <!-- <div class="text-red"
+            *ngIf="registerFormControl.get('username').hasError('pattern')"      >
+          its not a valid number
+          </div> -->
+    
+    
+    
+            </div>
+    
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            <label class="form-label" for="registerPassword">Password</label>
+    
+            <input type="password" id="registerPassword" class="form-control" placeholder=" password..."  formControlName="password">
+    
+            <div class="text-danger"
+              *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+            password is required
+            </div>
+    
+          </div>
+    
+    
+    
+          <!-- Checkbox -->
+          <div class="form-check d-flex justify-content-center mb-4">
+            <input
+              class="form-check-input me-2"
+              type="checkbox"
+              value=""
+              id="registerCheck"
+              checked
+              aria-describedby="registerCheckHelpText"
+            />
+            <label class="form-check-label" for="registerCheck">
+              I have read and agree to the terms
+            </label>
+          </div>
+    
+          <!-- Submit button -->
+          <button type="submit"  style="width: 40%;" class="btn btn-primary mb-3">Register</button>
+        </form>
+      </div>
+      </div>
+    </div>
+    <!-- Pills content -->
+    </div>

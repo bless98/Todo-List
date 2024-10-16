@@ -1,0 +1,43 @@
+.form
+{
+width: 40%;
+margin-left: 30%;
+margin-top: 3%;
+}
+
+.heading
+{
+    padding-left: 550px;
+   
+    color:#ffd900;
+}
+.form-check-input
+{
+    margin-left: -45%;
+}
+
+.btn{
+
+    border-radius: 50px;
+    margin-left: 30%;
+}
+
+.body
+{
+    background-color: black;
+    height: 100vh;
+}
+
+.form-label
+{
+    color: white;
+}
+
+p
+{
+ color: white;
+}
+label
+{
+    color:white;
+}

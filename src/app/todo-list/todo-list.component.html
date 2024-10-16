@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  
+<head></head>
+<body>
+<div id="myDIV" class="header">
+    <h2 style="margin: 5px;">to do list</h2>
+    <form [formGroup]="todoForm" (ngSubmit)="add()">
+        <input type="text" formControlName="title" id="myinput" placeholder="Title...">
+        <input type="submit" class ="addbtn" value="add">
+    </form>
+
+
+
+</div>
+
+<ul id="myUL">
+    <li *ngFor="let work of works;let i = index">{{works}} <span class="close" (click)="delete(i)">x</span></li>
+
+</ul>
+</body>
+</html>
